@@ -5,13 +5,9 @@ import java.util.Scanner;
 public class MakeChangeApp {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
 		ChangeDollarCalc dollarCalc = new ChangeDollarCalc();
 		ChangeCentsCalc centsCalc = new ChangeCentsCalc();
 		
-		int tenderDollar = 0;
-		int tenderCents = 0;
-		int changeDollar = 0;
 		int changeCents = 0;
 		double totalCost = 0.0;
 		double totalTender = 0.0;
@@ -30,11 +26,11 @@ public class MakeChangeApp {
 			System.out.println();
 			
 			// to keep things accurate, I split the entry of dollars and cents
-			tenderDollar = (int)totalTender;
-			tenderCents = (tenderDollar * 100 - (int)Math.round(totalTender * 100));
+			int tenderDollar = (int)totalTender;
+			int tenderCents = (tenderDollar * 100 - (int)Math.round(totalTender * 100));
 			tenderCents = Math.abs(tenderCents);
 
-			changeDollar = tenderDollar - costDollar;
+			int changeDollar = tenderDollar - costDollar;
 
 			if (tenderCents >= costCents) {
 				changeCents = tenderCents - costCents;
