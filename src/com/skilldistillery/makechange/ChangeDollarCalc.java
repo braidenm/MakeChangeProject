@@ -17,10 +17,10 @@ public class ChangeDollarCalc {
 				
 				if (twenties > 1) {
 
-					System.out.print(twenties + " Twenty dollar bills ");
+					System.out.print(twenties + " Twenty dollar bills, ");
 				}
 				else {
-					System.out.print( twenties + " Twenty dollar bill ");
+					System.out.print( twenties + " Twenty dollar bill, ");
 				}
 			}
 
@@ -29,10 +29,10 @@ public class ChangeDollarCalc {
 				num = num % 10;
 				
 				if (tens > 1) {
-				System.out.print(tens + " Ten dollar bills ");
+				System.out.print(tens + " Ten dollar bills, ");
 				}
 				else {
-					System.out.print(tens + " Ten dollar bill ");
+					System.out.print(tens + " Ten dollar bill, ");
 				}
 
 			}
@@ -42,19 +42,19 @@ public class ChangeDollarCalc {
 				num = num % 5;
 				
 				if (fives > 1) {
-					System.out.print(fives + " Five dollar bills ");
+					System.out.print(fives + " Five dollar bills, ");
 				}
 				else {
-					System.out.print(fives + " Five dollar bill ");
+					System.out.print(fives + " Five dollar bill, ");
 				}
 			}
 
 			if (num > 0) {
 				if (num >1){
-					System.out.print(num + " One dollar bills ");
+					System.out.print(num + " One dollar bills, ");
 				}
 				else {
-					System.out.print(num + " One dollar bill ");
+					System.out.print(num + " One dollar bill, ");
 				}
 			}
 

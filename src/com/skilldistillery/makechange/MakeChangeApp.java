@@ -13,25 +13,28 @@ public class MakeChangeApp {
 		int tenderCents = 0;
 		int changeDollar = 0;
 		int changeCents = 0;
-		double totalCost = 0;
-		double totalTender = 0;
+		double totalCost = 0.0;
+		double totalTender = 0.0;
 
+		System.out.print("What is the price of the item: $");
+		totalCost = sc.nextDouble();
+	
 		// to keep things accurate, I split the entry of dollars and cents
-		System.out.print("What is the price of the item (Dollars not cents): ");
-		int costDollar = sc.nextInt();
-		System.out.print("Now the cents: ");
-		int costCents = sc.nextInt();
+		int costDollar = (int)totalCost;
+		int costCents = (costDollar * 100 - (int)Math.round(totalCost * 100));
+		costCents = Math.abs(costCents);
 
 		do { 
-			System.out.print("What is the tender (Dollars not cents): ");
-			tenderDollar = sc.nextInt();
-			System.out.print("Now the cents: ");
-			tenderCents = sc.nextInt();
+			System.out.print("What is the tender: $");
+			totalTender = sc.nextDouble();
 			System.out.println();
+			
+			// to keep things accurate, I split the entry of dollars and cents
+			tenderDollar = (int)totalTender;
+			tenderCents = (tenderDollar * 100 - (int)Math.round(totalTender * 100));
+			tenderCents = Math.abs(tenderCents);
 
 			changeDollar = tenderDollar - costDollar;
-			totalCost = costDollar + (.01 * costCents);
-			totalTender = tenderDollar + (tenderCents * .01);
 
 			if (tenderCents >= costCents) {
 				changeCents = tenderCents - costCents;
@@ -58,10 +61,10 @@ public class MakeChangeApp {
 			else {
 				double stillNeed = totalTender - totalCost;
 				//needed to make it place a 0 for things like $.08
-				System.out.printf("You are short this much: $ %.2f %n", stillNeed);
+				System.out.printf("You are short: $ %.2f %n", stillNeed);
 			}
 		} while (totalTender <= totalCost);
-
+		System.out.println();
 		System.out.println("Thank you, have a nice day!");
 
 		sc.close();

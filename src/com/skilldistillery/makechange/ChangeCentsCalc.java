@@ -15,10 +15,10 @@ public class ChangeCentsCalc {
 				num = num % 25;
 				
 				if (quarters > 1 ) {
-					System.out.print(quarters + " Quarters ");
+					System.out.print(quarters + " Quarters, ");
 				}
 				else {
-					System.out.print(quarters + " Quarter ");
+					System.out.print(quarters + " Quarter, ");
 				}
 
 			}
@@ -28,10 +28,10 @@ public class ChangeCentsCalc {
 				num = num % 10;
 				
 				if (dimes > 1) {
-					System.out.print(dimes + " Dimes ");
+					System.out.print(dimes + " Dimes, ");
 				}
 				else {
-					System.out.print(dimes + " Dime ");
+					System.out.print(dimes + " Dime, ");
 				}
 
 			}
@@ -41,20 +41,20 @@ public class ChangeCentsCalc {
 				num = num % 5;
 				
 				if (nickels > 1) {
-					System.out.print(nickels + " Nickels ");
+					System.out.print(nickels + " Nickels, ");
 				}
 				else {
-					System.out.print( nickels + " Nickel ");
+					System.out.print( nickels + " Nickel, ");
 				}
 
 			}
 
 			if (num > 0) {
 				if ( num > 1) {
-					System.out.print(num + " Pennies ");
+					System.out.print(num + " Pennies, ");
 				}
 				else {
-					System.out.print(num + " Penny ");
+					System.out.print(num + " Penny, ");
 				}
 			}
 
