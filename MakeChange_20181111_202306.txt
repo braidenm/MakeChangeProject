@@ -1,5 +1,0 @@
-ERROR - 20:23:06: java.net.MalformedURLException: unknown protocol: pathmap
-ERROR - 20:28:49: java.net.MalformedURLException: unknown protocol: pathmap
-ERROR - 20:29:54: java.net.MalformedURLException: unknown protocol: pathmap
-WARNING - 20:36:40: Convert MakeChange
-ERROR - 20:36:41: java.net.MalformedURLException: unknown protocol: pathmap
