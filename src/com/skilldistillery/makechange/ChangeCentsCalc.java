@@ -51,10 +51,10 @@ public class ChangeCentsCalc {
 
 			if (num > 0) {
 				if ( num > 1) {
-					System.out.print(num + " Pennies, ");
+					System.out.print(num + " Pennies. ");
 				}
 				else {
-					System.out.print(num + " Penny, ");
+					System.out.print(num + " Penny. ");
 				}
 			}
 
